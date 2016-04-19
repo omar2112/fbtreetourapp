@@ -18,7 +18,9 @@
         <activity android:name=".TreeinfoActivity" />
         <activity android:name=".PacificDogwoodActivity" />
         <activity android:name=".MontereyPineActivity" />
-        <activity android:name=".EuropeanLarchActivity"></activity>
+        <activity android:name=".EuropeanLarchActivity" />
+        <activity android:name=".DeodarCedarActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bluefox.listtest1.AboutActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dedication"
+        android:id="@+id/textView9"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:text="This tour is dedicated to the memory of Professor C. Frank Brockman (1902-1985), who capped an influential, productive career in forestry and outdoor recreation by producing in 1980 the original University of Washington tree tour. Edited by Louise M. Hastie, that eight-page publication featured 81 campus trees, and had to be reprinted by popular demand. Along with the tour, Brockman authored five articles about campus trees for the U.W. Arboretum Bulletin. In 1968, the year he retired from the U.W. College of Forestry (now the School of Environmental and Forest Sciences), his best-selling &quot;Golden Guide&quot; to Trees of North America was released. Brockman&apos;s enthusiasm and love of sharing knowledge suggests he surely would welcome this new campus tree tour. " />
+</RelativeLayout>
