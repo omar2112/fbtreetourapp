@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent changeScreen;
                 if (i == 4) {
                     changeScreen = new Intent(view.getContext(), AboutActivity.class);
+                } else if (i == 1) {
+                    changeScreen = new Intent(view.getContext(), TestMapsActivity.class);
                 } else {
                     changeScreen = new Intent(view.getContext(), TreeinfoActivity.class);
 
