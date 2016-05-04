@@ -10,6 +10,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import android.view.View;
+import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import android.view.LayoutInflater;
+import android.widget.TextView;
+import com.google.android.gms.maps.model.Marker;
 
 public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -38,6 +44,8 @@ public class TestMapsActivity extends FragmentActivity implements OnMapReadyCall
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        //remove this line if custom infowindo doesn't work.
+        mMap.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(47.656161, -122.309313);
@@ -53,7 +61,7 @@ public class TestMapsActivity extends FragmentActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions().position(hybridHolly).title("Hybrid Holly").snippet(""+
                 "Against Johnson and Mary Gates Halls, three Hybrid Hollies stand out with their " +
                 "dark, evergreen foliage."));
-        mMap.addMarker(new MarkerOptions().position(cedarOfLebanon).title("Atlas Cedar"));
+        mMap.addMarker(new MarkerOptions().position(cedarOfLebanon).title("Atlas Cedar").icon(BitmapDescriptorFactory.fromResource(R.drawable.treeiconv2)));
 
 
         //mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
@@ -61,3 +69,73 @@ public class TestMapsActivity extends FragmentActivity implements OnMapReadyCall
         //  mMap.CameraUpdateFactory.zoomTo(20);
     }
 }
+
+
+class CustomWindowAdapter implements InfoWindowAdapter{
+    LayoutInflater mInflater;
+
+    public CustomWindowAdapter(LayoutInflater i){
+        mInflater = i;
+    }
+
+    // This defines the contents within the info window based on the marker
+
+    @Override
+    public View getInfoContents(Marker marker) {
+        // Getting view from the layout file
+        View v = mInflater.inflate(R.layout.sample_testing_view, null);
+        // Populate fields
+
+        //TextView title = (TextView) v.findViewById(R.id.tv_info_window_title);
+        //title.setText(marker.getTitle());
+
+        //TextView description = (TextView) v.findViewById(R.id.tv_info_window_description);
+        //description.setText(marker.getSnippet());
+        // Return info window contents
+
+        return v;
+    }
+
+    // This changes the frame of the info window; returning null uses the default frame.
+
+    // This is just the border and arrow surrounding the contents specified above
+
+    @Override
+    public View getInfoWindow(Marker marker) {
+        return null;
+    }
+}
+
+
+//We need to create a default XML for every infowindow that includes name, picture, and link to tree tour.
+//get this working by tomorrow, it's important to preview.
+
+/*testing custom infoWindows
+    private class CustomInfoWindowAdapter implements InfoWindowAdapter {
+
+        private View view;
+
+        public CustomInfoWindowAdapter() {
+            view = getLayoutInflater().inflate(R.layout.custom_info_window,
+            null);
+        }
+
+        @Override
+        public View getInfoContents(Marker marker) {
+
+            if (MainActivity.this.marker != null
+                    && MainActivity.this.marker.isInfoWindowShown()) {
+                MainActivity.this.marker.hideInfoWindow();
+                MainActivity.this.marker.showInfoWindow();
+            }
+            return null;
+        }
+
+        @Override
+        public View getInfoWindow(final Marker marker) {
+            return null; //we want to keep the default window, unless we want to mess with size,
+                        //which we very well may have to. shit.
+        }
+
+    }
+ */
