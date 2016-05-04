@@ -83,7 +83,13 @@ class CustomWindowAdapter implements InfoWindowAdapter{
     @Override
     public View getInfoContents(Marker marker) {
         // Getting view from the layout file
-        View v = mInflater.inflate(R.layout.sample_testing_view, null);
+        //View v = mInflater.inflate(R.layout.sample_testing_view, null);
+        View v;
+        if (marker.getTitle().equals("Yoshino Cherry")) {
+            v = mInflater.inflate(R.layout.sample_my_view, null);
+        } else {
+            v = mInflater.inflate(R.layout.sample_testing_view, null);
+        }
         // Populate fields
 
         //TextView title = (TextView) v.findViewById(R.id.tv_info_window_title);
