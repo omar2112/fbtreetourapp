@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.bluefox.listtest1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.bluefox.listtest1.hybridhollyView
+        android:layout_width="214dp"
+        android:layout_height="211dp"
+        android:background="#ccc"
+        android:paddingBottom="40dp"
+        android:paddingLeft="20dp"
+        app:exampleColor="#33b5e5"
+        app:exampleDimension="24sp"
+        app:exampleDrawable="@android:drawable/ic_menu_add"
+        app:exampleString="Hello, hybridhollyView"
+        android:id="@+id/view2"
+        android:layout_alignBottom="@+id/imageView7" />
+
+    <ImageView
+        android:layout_width="207dp"
+        android:layout_height="162dp"
+        android:id="@+id/imageView7"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/hybridholly"
+        android:layout_below="@+id/textView14"
+        android:layout_alignRight="@+id/view2"
+        android:layout_alignEnd="@+id/view2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hybrid Holly"
+        android:id="@+id/textView14"
+        android:layout_gravity="left|top"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/view2"
+        android:layout_alignEnd="@+id/view2" />
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 package com.example.bluefox.listtest1;
 
+import android.graphics.Bitmap;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -48,24 +50,36 @@ public class TestMapsActivity extends FragmentActivity implements OnMapReadyCall
         mMap.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(47.656161, -122.309313);
+        LatLng home = new LatLng(47.656642, -122.308213);
         LatLng yoshinoCherry = new LatLng(47.658129, -122.308097);
         LatLng cedarOfLebanon = new LatLng(47.658723, -122.307774);
         LatLng hybridHolly = new LatLng(47.654312, -122.307866);
-        LatLng atlasCedar = new LatLng(47.655865, -122.306878);
+        LatLng atlasCedar = new LatLng(47.655827, -122.306728);
 
+        LatLng lombardyPoplar = new LatLng(47.654491, -122.310213);
+        LatLng cherryPlum = new LatLng(47.655205, -122.306490);
+        LatLng hybridPlanetreesSycamore = new LatLng(47.658916, -122.309553);
+        LatLng deodarCedar = new LatLng(47.652013, -122.308593);
+        LatLng montereyPine = new LatLng(47.651556, -122.308437);
+        LatLng evergreenMagnolias = new LatLng(47.653798, -122.309526);
+        LatLng crabappleTrees = new LatLng(47.653872, -122.306887);
 
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("UW Red Square"));
-        mMap.addMarker(new MarkerOptions().position(yoshinoCherry).title("Yoshino Cherry"));
-        mMap.addMarker(new MarkerOptions().position(cedarOfLebanon).title("Cedar Of Lebanon"));
-        mMap.addMarker(new MarkerOptions().position(hybridHolly).title("Hybrid Holly").snippet(""+
-                "Against Johnson and Mary Gates Halls, three Hybrid Hollies stand out with their " +
-                "dark, evergreen foliage."));
-        mMap.addMarker(new MarkerOptions().position(cedarOfLebanon).title("Atlas Cedar").icon(BitmapDescriptorFactory.fromResource(R.drawable.treeiconv2)));
+        BitmapDescriptor treeIcon = BitmapDescriptorFactory.fromResource(R.drawable.smalltreeicon);
+        mMap.addMarker(new MarkerOptions().position(yoshinoCherry).title("Yoshino Cherry").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(cedarOfLebanon).title("Cedar of Lebanon").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(hybridHolly).title("Hybrid Holly").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(atlasCedar).title("Atlas Cedar").icon(treeIcon).flat(true));
 
+        mMap.addMarker(new MarkerOptions().position(lombardyPoplar).title("Lombardy Poplar").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(cherryPlum).title("Cherry Plum").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(hybridPlanetreesSycamore).title("Hybrid Planetrees/Sycamore").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(deodarCedar).title("Deodar Cedar").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(montereyPine).title("Monterey Pine").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(evergreenMagnolias).title("Evergreen Magnolias").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(crabappleTrees).title("Crab Apple Trees").icon(treeIcon).flat(true));
 
         //mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 16));
         //  mMap.CameraUpdateFactory.zoomTo(20);
     }
 }
@@ -86,8 +100,16 @@ class CustomWindowAdapter implements InfoWindowAdapter{
         //View v = mInflater.inflate(R.layout.sample_testing_view, null);
         View v;
         if (marker.getTitle().equals("Yoshino Cherry")) {
-            v = mInflater.inflate(R.layout.sample_my_view, null);
-        } else {
+            v = mInflater.inflate(R.layout.sample_yoshinocherry_view, null);
+        } else if (marker.getTitle().equals("Cedar of Lebanon")) {
+            v = mInflater.inflate(R.layout.sample_cedaroflebanon_view, null);
+        } else if (marker.getTitle().equals("Hybrid Holly")) {
+            v = mInflater.inflate(R.layout.sample_hybridholly_view, null);
+        } else if (marker.getTitle().equals("Atlas Cedar")) {
+            v = mInflater.inflate(R.layout.sample_atlascedar_view, null);
+        }
+
+        else {
             v = mInflater.inflate(R.layout.sample_testing_view, null);
         }
         // Populate fields

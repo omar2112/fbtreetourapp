@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.bluefox.listtest1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.bluefox.listtest1.yoshinocherryView
+        android:layout_width="223dp"
+        android:layout_height="233dp"
+        android:background="#ccc"
+        android:paddingBottom="40dp"
+        android:paddingLeft="20dp"
+        app:exampleColor="#33b5e5"
+        app:exampleDimension="24sp"
+        app:exampleDrawable="@android:drawable/ic_menu_add"
+        app:exampleString="Hello, yoshinocherryView" />
+
+    <ImageView
+        android:layout_width="214dp"
+        android:layout_height="167dp"
+        android:id="@+id/imageView8"
+        android:layout_gravity="left|top"
+        android:src="@drawable/yoshinocherry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Yoshino Cherry"
+        android:id="@+id/textView13"
+        android:layout_gravity="left|top" />
+
+</FrameLayout>

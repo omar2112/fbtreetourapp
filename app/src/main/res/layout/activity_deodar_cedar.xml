@@ -34,7 +34,7 @@
         android:id="@+id/imageView"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/deodar" />
+        android:src="@drawable/deodarcedar" />
 
     <EditText
         android:layout_width="wrap_content"
