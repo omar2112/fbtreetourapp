@@ -1,5 +1,6 @@
 package com.example.bluefox.listtest1;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -19,14 +20,22 @@ import android.view.LayoutInflater;
 import android.widget.TextView;
 import com.google.android.gms.maps.model.Marker;
 
-public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
+//public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class TestMapsActivity extends MainActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /*
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_maps);
+        */
+        super.onCreate(savedInstanceState);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_test_maps, null, false);
+        mDrawerLayout.addView(contentView, 0);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -148,35 +157,14 @@ class CustomWindowAdapter implements InfoWindowAdapter{
 }
 
 
-//We need to create a default XML for every infowindow that includes name, picture, and link to tree tour.
-//get this working by tomorrow, it's important to preview.
+/*
 
-/*testing custom infoWindows
-    private class CustomInfoWindowAdapter implements InfoWindowAdapter {
 
-        private View view;
+                 if (i == 2) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.658129, -122.308097&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }
 
-        public CustomInfoWindowAdapter() {
-            view = getLayoutInflater().inflate(R.layout.custom_info_window,
-            null);
-        }
-
-        @Override
-        public View getInfoContents(Marker marker) {
-
-            if (MainActivity.this.marker != null
-                    && MainActivity.this.marker.isInfoWindowShown()) {
-                MainActivity.this.marker.hideInfoWindow();
-                MainActivity.this.marker.showInfoWindow();
-            }
-            return null;
-        }
-
-        @Override
-        public View getInfoWindow(final Marker marker) {
-            return null; //we want to keep the default window, unless we want to mess with size,
-                        //which we very well may have to. shit.
-        }
-
-    }
  */
