@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,16 +38,36 @@ public class TreeInformation extends MainActivity {
                         "\n" +
                         "\n" +
                         "Deodar Cedars unite the relaxed, drooping posture of hemlocks and the massive horizontal sturdiness of certain pines, whether yielding valuable wood in Indian forests or graciously decorating our landscapes. Among Hindus, Deodar Cedars are regarded as divine trees. The name Deodar derives from the Sanskrit term devadāru, meaning “wood of the gods”. The wood is highly prized as building material because of its fine, close grain and rot-resistant properties. If the lower branches are pruned, Deodar Cedars are used as street trees in urban areas because they can tolerate compacted, poor soils.  Compare Deodar with its congeners: Atlas cedar and cedar of Lebanon.");
+                tourButtonPress(itemValue);
                 break;
             case ("Monterey Pine"):
                 description.setText("Monterey Pine Monterey Pine Monterey Pine");
+                tourButtonPress(itemValue);
+
                 break;
             case ("European Larch"):
                 description.setText("European Larch European Larch European Larch");
+                //description.setText(MainActivity.treeList.get(0));
+                //customTourActivity.treeList.add("European Larch");
+                tourButtonPress(itemValue);
+
                 break;
             default:
                 description.setText("default");
                 break;
         }
     }
+    private void tourButtonPress(final String itemValue) {
+        Button b = (Button)findViewById(R.id.tourbutton);
+        b.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                MainActivity.treeList.add(itemValue);
+                //Toast.makeText(TreeInformation.this, "Added " + itemValue + " to custom tree tour", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+    }
+
 }
+

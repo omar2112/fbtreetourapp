@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="ea3467538ffafb6f93b1774a97b9a8dcd0659aba">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_2e8f6f0b09ac64e0f64c96d4e2c3df04100747da.jar" />
-    </item>
-
-</items>
+<items version="2" />

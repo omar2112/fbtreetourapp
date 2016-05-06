@@ -72,6 +72,8 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         LatLng montereyPine = new LatLng(47.651556, -122.308437);
         LatLng evergreenMagnolias = new LatLng(47.653798, -122.309526);
         LatLng crabappleTrees = new LatLng(47.653872, -122.306887);
+        LatLng europeanLarch = new LatLng(47.651689, -122.308093);
+
 
         BitmapDescriptor treeIcon = BitmapDescriptorFactory.fromResource(R.drawable.smalltreeicon);
         mMap.addMarker(new MarkerOptions().position(yoshinoCherry).title("Yoshino Cherry").icon(treeIcon).flat(true));

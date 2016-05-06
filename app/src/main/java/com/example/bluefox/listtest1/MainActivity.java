@@ -13,12 +13,23 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> theAdapter;
     private ListView mainMenuView;
     private ActionBarDrawerToggle mDrawerToggle;
     protected DrawerLayout mDrawerLayout;
     private String mActivityTitle;
+
+    private static MainActivity tourInstance;
+    public static MainActivity getInstance() {
+        return tourInstance;
+    }
+    //call this outside with customTourActivity.treeList
+    public static List<String> treeList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+        tourInstance = this;
+
     }
 
     private void addDrawerItems() {
         final String[] homeOptions = {"Home", "Tree Tour", "Tree Directory", "Favorites",
                 "About", "Contact Us", "Help"};
+        
+
         theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, homeOptions);
         mainMenuView.setAdapter(theAdapter);
 
@@ -52,7 +68,11 @@ public class MainActivity extends AppCompatActivity {
                     changeScreen = new Intent(view.getContext(), TestMapsActivity.class);
                 } else if (position == 0) {
                     changeScreen = new Intent(view.getContext(), MainActivity.class);
-                } else {
+                }  else if (position == 3) {
+                    changeScreen = new Intent(view.getContext(), customTourActivity.class);
+                }
+
+                else {
                     changeScreen = new Intent(view.getContext(), TreeinfoActivity.class);
 
                 }
