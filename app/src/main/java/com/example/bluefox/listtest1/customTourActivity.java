@@ -72,6 +72,56 @@ public class customTourActivity extends MainActivity {
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                     mapIntent.setPackage("com.google.android.apps.maps");
                     startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Yoshino Cherry")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.658129, -122.308097&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Cedar of Lebanon")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.658723, -122.307774&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Hybrid Holly")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.654312, -122.307866&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Atlas Cedar")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.655827, -122.306728&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Lombardy Poplar")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.654491, -122.310213&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Cherry Plum")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.655205, -122.306490&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Hybrid Planetrees/Sycamore")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.658916, -122.309553&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Deodar Cedar")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.652013, -122.308593&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Evergreen Magnolias")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.653798, -122.309526&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                } else if (MainActivity.treeList.get(position).equals("Crab Apple Trees")) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.653872, -122.306887&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
                 }
 
 

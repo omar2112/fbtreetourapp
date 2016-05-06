@@ -24,10 +24,9 @@ public class TreeinfoActivity extends MainActivity {
 
 
         theListView = (ListView) findViewById(R.id.theListView);
-        String[] treeDir = new String[] {"Deodar Cedar", "Monterey Pine", "European Larch", "China-Fir",
-                "Japanese Snowbell Tree", "Coast Redwood", "Bigcone Pine",
-                "Lawson Cypress", "English Elm", "Pin Oak", "Eastern Dogwood", "Ginkgo",
-                "American White Elm", "Honey Locust", "Silk Tree", "Pindrow Fir", "Cork Oak"};
+        String[] treeDir = new String[] {"Monterey Pine", "European Larch", "Yoshino Cherry", "Cedar of Lebanon",
+                "Hybrid Holly", "Atlas Cedar", "Lombardy Poplar", "Cherry Plum", "Hybrid Planetrees/Sycamore",
+                "Deodar Cedar", "Evergreen Magnolia", "Crab Apple Trees"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, android.R.id.text1, treeDir);
         theListView.setAdapter(adapter);

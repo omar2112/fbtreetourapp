@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addDrawerItems() {
-        final String[] homeOptions = {"Home", "Tree Tour", "Tree Directory", "Favorites",
-                "About", "Contact Us", "Help"};
+        final String[] homeOptions = {"Home", "Tree Tour", "Tree Directory", "Custom Tree Tour",
+                "About"};
 
 
         theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, homeOptions);

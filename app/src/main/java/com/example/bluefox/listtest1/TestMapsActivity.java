@@ -10,6 +10,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -61,6 +62,11 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         mMap = googleMap;
         //remove this line if custom infowindo doesn't work.
         mMap.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
+        //UiSettings.setZoomControlsEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setCompassEnabled(true);
 
         // Add a marker in Sydney and move the camera
         LatLng home = new LatLng(47.656642, -122.308213);
