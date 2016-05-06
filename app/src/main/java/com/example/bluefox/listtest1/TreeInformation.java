@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class TreeInformation extends MainActivity {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contentView = inflater.inflate(R.layout.activity_tree_information, null, false);
         mDrawerLayout.addView(contentView, 0);
+        mDrawerLayout.closeDrawer(Gravity.LEFT);
 
 
         Intent launchedMe = getIntent();

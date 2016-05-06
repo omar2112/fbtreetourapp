@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mainMenuView = (ListView) findViewById(R.id.mainMenuView);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
-
+        mDrawerLayout.openDrawer(Gravity.LEFT);
         addDrawerItems();
         setupDrawer();
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private void addDrawerItems() {
         final String[] homeOptions = {"Home", "Tree Tour", "Tree Directory", "Favorites",
                 "About", "Contact Us", "Help"};
-        
+
 
         theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, homeOptions);
         mainMenuView.setAdapter(theAdapter);

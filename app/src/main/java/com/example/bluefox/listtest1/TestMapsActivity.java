@@ -14,6 +14,8 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+
+import android.view.Gravity;
 import android.view.View;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import android.view.LayoutInflater;
@@ -40,6 +42,8 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        mDrawerLayout.closeDrawer(Gravity.LEFT);
+
     }
 
 

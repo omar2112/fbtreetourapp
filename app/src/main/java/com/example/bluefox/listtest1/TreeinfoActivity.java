@@ -3,6 +3,7 @@ package com.example.bluefox.listtest1;
 import android.content.Context;
 import android.os.Bundle;
 import android.content.Intent;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +20,8 @@ public class TreeinfoActivity extends MainActivity {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contentView = inflater.inflate(R.layout.activity_treeinfo, null, false);
         mDrawerLayout.addView(contentView, 0);
+        mDrawerLayout.closeDrawer(Gravity.LEFT);
+
 
         theListView = (ListView) findViewById(R.id.theListView);
         String[] treeDir = new String[] {"Deodar Cedar", "Monterey Pine", "European Larch", "China-Fir",
