@@ -42,7 +42,8 @@
 
         <activity
             android:name=".TestMapsActivity"
-            android:label="@string/title_activity_test_maps"></activity>
+            android:label="@string/title_activity_test_maps" />
+        <activity android:name=".customTourActivity"></activity>
     </application>
 
 </manifest>
