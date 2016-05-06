@@ -1,2 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-8.4.0_7683a6309390e294df12434f034620099e9cdd79.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-8.4.0_bc5c685c8f9c9216a0a7745a0798e30f62a8325a.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-8.4.0_430315b47e76df0e70f430a6ba505976e3ee5e8b.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_84b8db4d411c72e22794102950d8642ff0645664.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-8.4.0_7c7a8db02b665479f2d8f68ddbe40b32e392300b.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-measurement-8.4.0_a7d30d8cb62a3a1dd0e7aa87be9c73c77addeaa1.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-8.4.0_5bef8e14a6890a76bff56fcfa79498f43d0482b5.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_93effe950decda9f2489c235c6681bb8dccce501.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_611f401105e0297af65da7b806b94ab79bf735c9.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-8.4.0_37960deacc6220310e884ab9cef43bdedfc13446.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_82f3beff02e90429169ac1d999961a95d4528c85.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-8.4.0_23a529e6984e45e8db362fce5c7275be3dd4c975.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0_b9f11c731db898e0dc7ae31fdd74054896a0fddb.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_5176d1b5e2c63e0bde91e079bd0bdf77956dd8bf.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-8.4.0_926cd5eaaf0052eb42fc2e859664273ce81eee47.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_8c25641ed4c1608f9a8ebb76b196f197c01b9e5b.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-8.4.0_5485bf70286500322cd09a5edfe36d4fecc829d2.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-8.4.0_081aeee25a9c904722f2701dd31f77a01faad93b.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-8.4.0_6ad2809cea60154ab5c59879b1d16c1062cd0b8e.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea60fe9bccfc9086e94604588f0af8af3f7b2eae">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run_4d21b56c0c5f6d14f34dc7eb8b4c7529986ab58b.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ddd74486353b84ab3b7c6db1ccd11956ad09efa6">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_2e8f6f0b09ac64e0f64c96d4e2c3df04100747da.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-8.4.0_21f86307a71baca826133637b30201f574736562.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-8.4.0_bda9359e1ec018a4cde45d582c6cf11f9b950e57.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_284d0059417301ea2ea8242247c488ccb82f6560.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-23.0.0_0652b4f6f4f68e74791c9107786cda73ea6b0225.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-8.4.0_6984b13f1d6f85b0f87aeb052f2b5ab962083cae.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-8.4.0_6eeb942b70d6ea50773e580ec4d945fecce0bf3c.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-8.4.0_e4717739ceb2927e62c1c43898738aad14cd5c51.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-8.4.0_c79a151db60473a63158b29978161baa625845ba.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_044ef523048dc840b2cbcea1deba0cac8924db02.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.4.0_5b56d6dcbec834d31b46b33b136f995eaa609db5.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-8.4.0_bd67e526275c27bff5723d9c8dc9736699b6217e.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-8.4.0_a99bda03e0afd78fc58922ca36875cda26199d99.jar" />
+    </item>
+
+</items>

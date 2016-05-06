@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 */
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -52,14 +53,24 @@ public class MainActivity extends AppCompatActivity {
                     changeScreen = new Intent(view.getContext(), AboutActivity.class);
                 } else if (i == 1) {
                     changeScreen = new Intent(view.getContext(), TestMapsActivity.class);
-                } else {
+                }
+
+
+                else {
                     changeScreen = new Intent(view.getContext(), TreeinfoActivity.class);
 
                 }
 
-
-
                 startActivityForResult(changeScreen, 0);
+
+                /*
+                 if (i == 2) {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.658129, -122.308097&mode=w");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }
+                */
             }
         });
 

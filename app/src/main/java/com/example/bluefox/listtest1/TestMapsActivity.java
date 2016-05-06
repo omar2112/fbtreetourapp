@@ -107,8 +107,21 @@ class CustomWindowAdapter implements InfoWindowAdapter{
             v = mInflater.inflate(R.layout.sample_hybridholly_view, null);
         } else if (marker.getTitle().equals("Atlas Cedar")) {
             v = mInflater.inflate(R.layout.sample_atlascedar_view, null);
+        } else if (marker.getTitle().equals("Lombardy Poplar")) {
+            v = mInflater.inflate(R.layout.sample_lombardypoplar_view, null);
+        } else if (marker.getTitle().equals("Cherry Plum")) {
+            v = mInflater.inflate(R.layout.sample_cherryplum_view, null);
+        } else if (marker.getTitle().equals("Hybrid Planetrees/Sycamore")) {
+            v = mInflater.inflate(R.layout.sample_hybridplanetreessycamore_view, null);
+        } else if (marker.getTitle().equals("Deodar Cedar")) {
+            v = mInflater.inflate(R.layout.sample_deodarcedar_view, null);
+        } else if (marker.getTitle().equals("Monterey Pine")) {
+            v = mInflater.inflate(R.layout.sample_montereypine_view, null);
+        } else if (marker.getTitle().equals("Evergreen Magnolias")) {
+            v = mInflater.inflate(R.layout.sample_evergreenmagnolias_view, null);
+        } else if (marker.getTitle().equals("Crab Apple Trees")) {
+            v = mInflater.inflate(R.layout.sample_crabappletrees_view, null);
         }
-
         else {
             v = mInflater.inflate(R.layout.sample_testing_view, null);
         }
