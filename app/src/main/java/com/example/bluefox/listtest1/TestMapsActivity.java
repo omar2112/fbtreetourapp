@@ -1,7 +1,9 @@
 package com.example.bluefox.listtest1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -21,7 +23,10 @@ import android.view.View;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import android.view.LayoutInflater;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.android.gms.maps.model.Marker;
+
 
 //public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 public class TestMapsActivity extends MainActivity implements OnMapReadyCallback {
@@ -67,6 +72,35 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
 
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setCompassEnabled(true);
+        //mMap.setOnInfoWindowClickListener(this);
+        //mMap.setOnMarkerClickListener((GoogleMap.OnMarkerClickListener) this);
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                String itemValue = marker.getTitle(); // Have this be your tree. Looks like "marker.getTitle()"
+                Intent nextActivity = new Intent(TestMapsActivity.this, TreeInformation.class);
+                nextActivity.putExtra("trees", itemValue);
+                startActivity(nextActivity);
+            }
+        });
+
+        /* code to open up the web browser
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+            startActivity(browserIntent);
+         */
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener()
+        {
+            @Override
+            public boolean onMarkerClick(Marker arg0) {
+                 Toast.makeText(TestMapsActivity.this, "Tap the blue button below to navigate to this tree" +
+                        " with the Google Maps app (will open seperately)", Toast.LENGTH_LONG).show();
+
+                return false;
+            }
+        });
+
+  
 
         // Add a marker in Sydney and move the camera
         LatLng home = new LatLng(47.656642, -122.308213);
@@ -102,8 +136,30 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         //mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 16));
         //  mMap.CameraUpdateFactory.zoomTo(20);
+
+        /*
+                Toast.makeText(TestMapsActivity.this, "Tap the button to the left to navigate to this tree" +
+                " with the Google Maps app (will open seperately)", Toast.LENGTH_LONG).show();
+
+
+         */
     }
+
+    /*
+    //@Override
+    public boolean onMarkerClick(Marker marker) {
+        Toast.makeText(TestMapsActivity.this, "Tap the button to the left to navigate to this tree" +
+                " with the Google Maps app (will open seperately)", Toast.LENGTH_LONG).show();
+        return false;
+    }
+    */
+
+
 }
+
+
+
+
 
 
 class CustomWindowAdapter implements InfoWindowAdapter{
@@ -146,6 +202,8 @@ class CustomWindowAdapter implements InfoWindowAdapter{
         else {
             v = mInflater.inflate(R.layout.sample_testing_view, null);
         }
+
+
         // Populate fields
 
         //TextView title = (TextView) v.findViewById(R.id.tv_info_window_title);
