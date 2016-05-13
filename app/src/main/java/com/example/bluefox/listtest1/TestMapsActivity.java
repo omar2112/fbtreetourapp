@@ -20,6 +20,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.LocationSource;
 
 import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
@@ -31,6 +32,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.Marker;
+
+import android.location.LocationManager;
 
 
 //public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -106,7 +109,6 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
             }
         });
 
-  
 
         // Add a marker in Sydney and move the camera
         LatLng home = new LatLng(47.656642, -122.308213);
