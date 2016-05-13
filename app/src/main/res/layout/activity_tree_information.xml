@@ -18,10 +18,10 @@
             android:layout_height="wrap_content"
             android:text="Add To Tour"
             android:id="@+id/tourbutton"
-            android:layout_below="@+id/topic_id"
+            android:layout_marginTop="46dp"
+            android:layout_below="@+id/imageView"
             android:layout_toRightOf="@+id/Description_holder"
-            android:layout_toEndOf="@+id/Description_holder"
-            android:layout_marginTop="55dp" />
+            android:layout_toEndOf="@+id/Description_holder" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -56,7 +56,13 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-
+        <ImageView
+            android:layout_width="224dp"
+            android:layout_height="175dp"
+            android:id="@+id/imageView"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/topic_id"
+            android:layout_centerHorizontal="true" />
 
 
     </RelativeLayout>

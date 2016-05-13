@@ -1,15 +1,18 @@
 package com.example.bluefox.listtest1;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
@@ -18,10 +21,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
+import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.View;
 import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import android.view.LayoutInflater;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,7 +54,6 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         mDrawerLayout.closeDrawer(Gravity.LEFT);
-
     }
 
 
@@ -65,6 +69,8 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
+
         //remove this line if custom infowindo doesn't work.
         mMap.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
         //UiSettings.setZoomControlsEnabled(true);
@@ -114,7 +120,7 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         LatLng hybridPlanetreesSycamore = new LatLng(47.658916, -122.309553);
         LatLng deodarCedar = new LatLng(47.652013, -122.308593);
         LatLng montereyPine = new LatLng(47.651556, -122.308437);
-        LatLng evergreenMagnolias = new LatLng(47.653798, -122.309526);
+        LatLng evergreenMagnolia = new LatLng(47.653798, -122.309526);
         LatLng crabappleTrees = new LatLng(47.653872, -122.306887);
         LatLng europeanLarch = new LatLng(47.651689, -122.308093);
 
@@ -130,7 +136,7 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(hybridPlanetreesSycamore).title("Hybrid Planetrees/Sycamore").icon(treeIcon).flat(true));
         mMap.addMarker(new MarkerOptions().position(deodarCedar).title("Deodar Cedar").icon(treeIcon).flat(true));
         mMap.addMarker(new MarkerOptions().position(montereyPine).title("Monterey Pine").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(evergreenMagnolias).title("Evergreen Magnolias").icon(treeIcon).flat(true));
+        mMap.addMarker(new MarkerOptions().position(evergreenMagnolia).title("Evergreen Magnolia").icon(treeIcon).flat(true));
         mMap.addMarker(new MarkerOptions().position(crabappleTrees).title("Crab Apple Trees").icon(treeIcon).flat(true));
 
         //mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
@@ -145,18 +151,11 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
          */
     }
 
-    /*
-    //@Override
-    public boolean onMarkerClick(Marker marker) {
-        Toast.makeText(TestMapsActivity.this, "Tap the button to the left to navigate to this tree" +
-                " with the Google Maps app (will open seperately)", Toast.LENGTH_LONG).show();
-        return false;
-    }
-    */
 
 
 }
 
+//                 iv.setImageResource(R.drawable.yoshinocherry);
 
 
 
@@ -176,28 +175,74 @@ class CustomWindowAdapter implements InfoWindowAdapter{
         // Getting view from the layout file
         //View v = mInflater.inflate(R.layout.sample_testing_view, null);
         View v;
+        ImageView iv;
+        TextView tv;
         if (marker.getTitle().equals("Yoshino Cherry")) {
-            v = mInflater.inflate(R.layout.sample_yoshinocherry_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.yoshinocherry);
         } else if (marker.getTitle().equals("Cedar of Lebanon")) {
-            v = mInflater.inflate(R.layout.sample_cedaroflebanon_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.cedaroflebanon);
         } else if (marker.getTitle().equals("Hybrid Holly")) {
-            v = mInflater.inflate(R.layout.sample_hybridholly_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.hybridholly);
         } else if (marker.getTitle().equals("Atlas Cedar")) {
-            v = mInflater.inflate(R.layout.sample_atlascedar_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.atlascedar);
         } else if (marker.getTitle().equals("Lombardy Poplar")) {
-            v = mInflater.inflate(R.layout.sample_lombardypoplar_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.lombardypoplar);
         } else if (marker.getTitle().equals("Cherry Plum")) {
-            v = mInflater.inflate(R.layout.sample_cherryplum_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.cherryplum);
         } else if (marker.getTitle().equals("Hybrid Planetrees/Sycamore")) {
-            v = mInflater.inflate(R.layout.sample_hybridplanetreessycamore_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.hybridplanetreessycamore);
         } else if (marker.getTitle().equals("Deodar Cedar")) {
-            v = mInflater.inflate(R.layout.sample_deodarcedar_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.deodarcedar);
         } else if (marker.getTitle().equals("Monterey Pine")) {
-            v = mInflater.inflate(R.layout.sample_montereypine_view, null);
-        } else if (marker.getTitle().equals("Evergreen Magnolias")) {
-            v = mInflater.inflate(R.layout.sample_evergreenmagnolias_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.montereypine);
+        } else if (marker.getTitle().equals("Evergreen Magnolia")) {
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.evergreenmagnolia);
         } else if (marker.getTitle().equals("Crab Apple Trees")) {
-            v = mInflater.inflate(R.layout.sample_crabappletrees_view, null);
+            v = mInflater.inflate(R.layout.activity_tree_window, null);
+            tv = (TextView) v.findViewById(R.id.tv1);
+            tv.setText(marker.getTitle());
+            iv = (ImageView) v.findViewById(R.id.iv1);
+            iv.setImageResource(R.drawable.crabappletrees);
         }
         else {
             v = mInflater.inflate(R.layout.sample_testing_view, null);

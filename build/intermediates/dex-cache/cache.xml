@@ -2,81 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="7478082206f0c57577c7a82a43caf552b52a759f">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_2e8f6f0b09ac64e0f64c96d4e2c3df04100747da.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-8.4.0_bda9359e1ec018a4cde45d582c6cf11f9b950e57.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_284d0059417301ea2ea8242247c488ccb82f6560.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_5176d1b5e2c63e0bde91e079bd0bdf77956dd8bf.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_84b8db4d411c72e22794102950d8642ff0645664.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_93effe950decda9f2489c235c6681bb8dccce501.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_8c25641ed4c1608f9a8ebb76b196f197c01b9e5b.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_611f401105e0297af65da7b806b94ab79bf735c9.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_044ef523048dc840b2cbcea1deba0cac8924db02.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_82f3beff02e90429169ac1d999961a95d4528c85.jar" />
-    </item>
-    <item
-        jar="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="7a8384ded0db15e443f9cb2204d0d63421aec63e">
-        <dex dex="/home/bluefox/AndroidStudioProjects/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run_4d21b56c0c5f6d14f34dc7eb8b4c7529986ab58b.jar" />
+        sha1="1f32fcab0fe43de0a0aaf3e4fbf9c9337b083e08">
+        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2421612c6857c3df1b46fa63d71a5cea72983b2d\classes.dex" />
     </item>
 
 </items>
