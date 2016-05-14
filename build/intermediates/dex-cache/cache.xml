@@ -2,81 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_5fee4bb13e226094c6da317bf7d7e8eb54f3e569\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.3.0_1b8b1bdbcda7bb0e41e8a655c8333c631846d46c\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_c23861f657d33e642d36f8efedf33f8a8277768d\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.3.0_0ca4f76957e515c394235f0d8ed3d0fcaafcdf64\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_68219d18c4bdc946d4c30dc6f0d3177dc8dc8ae3\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="d8c90f59d0f82904511ce0c26c929509aaf3ad45">
+        sha1="325040e3d842f18f6b25cf0c14c56ccbb9510c41">
         <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2421612c6857c3df1b46fa63d71a5cea72983b2d\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.3.0_681f4ae560971d5817d2bcf3a459fc3e11db346f\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="49b3e4015ceb059c6ffd69f8a84d468d0817572b">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a76e4c55cd29b5da6c3f9cee03718dfc95d950fc\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_4021883ab3172b4120ced660a26296ac351b62d4\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-8.4.0_d96e1e2972ba442ef6d862dcdd4a71c51b17dabb\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.3.0_875925c30cc9ff8de6f32f87393ba97efc93abc2\classes.dex" />
     </item>
 
 </items>

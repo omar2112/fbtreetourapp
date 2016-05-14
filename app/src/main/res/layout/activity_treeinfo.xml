@@ -11,9 +11,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.bluefox.listtest1.TreeinfoActivity">
 
+    <!-- Editext for Search -->
+    <EditText android:id="@+id/inputSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search trees.."
+        android:inputType="textVisiblePassword"/>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/theListView"></ListView>
+        android:id="@+id/theListView"
+        android:layout_below="@+id/inputSearch"></ListView>
 
 </RelativeLayout>
