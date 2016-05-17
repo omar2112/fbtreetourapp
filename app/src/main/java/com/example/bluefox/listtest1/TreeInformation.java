@@ -140,14 +140,29 @@ public class TreeInformation extends MainActivity {
     }
     private void tourButtonPress(final String itemValue) {
         Button b = (Button)findViewById(R.id.tourbutton);
-        b.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                MainActivity.treeList.add(itemValue);
-                Toast.makeText(TreeInformation.this, "Added " + itemValue + " to custom tree tour", Toast.LENGTH_SHORT).show();
-            }
+        if (b != null) {
+            b.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    if (!containsMultiple(itemValue)) {
+                        MainActivity.treeList.add(itemValue);
+                        Toast.makeText(TreeInformation.this, "Added " + itemValue + " to custom tree tour", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(TreeInformation.this, itemValue + " is already in your list", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
-        });
+            });
+        }
+    }
+
+    boolean containsMultiple(String itemValue) {
+        for (String t: MainActivity.treeList) {
+            if (t.equals(itemValue)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="325040e3d842f18f6b25cf0c14c56ccbb9510c41">
-        <dex dex="C:\Users\Jamy\Desktop\School\Capstone - Tree Tour\fbtreetourapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2421612c6857c3df1b46fa63d71a5cea72983b2d\classes.dex" />
-    </item>
-
-</items>

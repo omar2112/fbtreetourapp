@@ -108,7 +108,6 @@ public class customTourActivity extends MainActivity {
         //tourInstance = this;
         //setContentView(R.layout.activity_custom_tour);
         //treeList.add("testing");
-        String[] banana = new String[] {"apples", "oranges"};
         ListView theListView = (ListView)findViewById(R.id.customTour);
 
 
