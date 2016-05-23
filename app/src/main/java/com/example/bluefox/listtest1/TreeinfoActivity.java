@@ -32,13 +32,25 @@ public class TreeinfoActivity extends MainActivity {
         mDrawerLayout.addView(contentView, 0);
         mDrawerLayout.closeDrawer(Gravity.LEFT);
 
-
         theListView = (ListView) findViewById(R.id.theListView);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
 
-        String[] treeDir = new String[] {"Monterey Pine", "European Larch", "Yoshino Cherry", "Cedar of Lebanon",
-                "Hybrid Holly", "Atlas Cedar", "Lombardy Poplar", "Cherry Plum", "Hybrid Planetrees/Sycamore",
-                "Deodar Cedar", "Evergreen Magnolia", "Crab Apple Trees"};
+        String[] treeDir = new String[] {"Deodar Cedar", "Monterey Pine", "European Larch",
+                "China Fir", "Japanese Snowbell Tree", "Coast Redwood", "Coulter Pine",
+                "Lawson Cypress", "English Elm", "Pin Oak", "Eastern Dogwood", "Ginkgo",
+                "American White Elm", "Honey Locust", "Silk Tree", "Pindrow Fir", "Cork Oak",
+                "Bay Laurel", "Cherry Plum", "Douglas Fir", "Western Red Cedar", "Atlas Cedar",
+                "Red Oak", "Copper Beech", "Sugar Maple", "Paper Birch", "Swedish Whitebeam",
+                "Katsura", "Scots Pine", "Weeping European White Birch", "English Maple",
+                "Horse Chestnut", "Japanese Maple", "Yoshino Cherry", "Cedar of Lebanon",
+                "Sweetgum", "Yellow Birch", "Japanese Red Pine", "Red Hickory", "Monkey Puzzle",
+                "Black Walnut", "Bur Oak", "Hybrid Planetrees/Sycamore", "Digger Pine",
+                "Eastern White Pine", "Western White Pine", "Purpleleaf Plum", "Norway Maple",
+                "Shumard Red Oak", "Hisakura Cherry", "Lombardy Poplar", "Shore Pine",
+                "Poderosa Pine", "Bristlecone Pine", "Evergreen Magnolia", "European Chestnut",
+                "Hybrid Holly", "Dawn Redwood", "Crab Apple Trees", "Cucumber Tree",
+                "Hawthorn Trees", "Sierra Redwood", "Crape Myrtle", "Irish Yew",
+                "Chinese Juniper", "Oregon White Oak"};
 
         adapter = new ArrayAdapter<String> (this, R.layout.list_item, R.id.product_name, treeDir);
         theListView.setAdapter(adapter);
@@ -66,42 +78,12 @@ public class TreeinfoActivity extends MainActivity {
 
             @Override
             public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                          int arg3) {
-                // TODO Auto-generated method stub
-
-            }
+                                          int arg3) {}
 
             @Override
-            public void afterTextChanged(Editable arg0) {
-                // TODO Auto-generated method stub
-            }
+            public void afterTextChanged(Editable arg0) {}
         });
-
-
     }
-
-/*                    ListAdapter theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, treeDir);
-
-        theListView.setAdapter(theAdapter);
-
-        theListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent changeScreen;
-                if (i == 0) {
-                    changeScreen = new Intent(view.getContext(), DeodarCedarActivity.class);
-                } else if (i == 1) {
-                    changeScreen = new Intent(view.getContext(), MontereyPineActivity.class);
-                } else if (i == 2) {
-                    changeScreen = new Intent(view.getContext(), EuropeanLarchActivity.class);
-                } else {
-                    changeScreen = new Intent(view.getContext(), DeodarCedarActivity.class);
-                }
-                startActivityForResult(changeScreen, 0);
-            }
-        });
-        topic_name.setText("Default Title");
-                    description.setText("Default Description");*/
 }
 
 

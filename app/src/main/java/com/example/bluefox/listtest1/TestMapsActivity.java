@@ -42,6 +42,7 @@ import com.google.android.gms.maps.model.Marker;
 import android.location.LocationManager;
 
 import java.security.Permissions;
+import java.util.Map;
 
 //public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 public class TestMapsActivity extends MainActivity implements OnMapReadyCallback {
@@ -73,16 +74,6 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         mDrawerLayout.closeDrawer(Gravity.LEFT);
     }
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -96,18 +87,19 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
             }
         }
         else {
-            mGoogleApiClient.connect();            mMap.setMyLocationEnabled(true);
+            /*
+             NOTE: This line of code causes my phone to crash. I discovered this when I was
+             dealing with permissions BS. I think we should leave this commented until we
+             figure out how to make it work with phones < API 23 (mine is 19).
+             My location works good though (^_^)b
+             mGoogleApiClient.connect();
+            */
+            mMap.setMyLocationEnabled(true);
         }
-
-        //remove this line if custom infowindo doesn't work.
         mMap.setInfoWindowAdapter(new CustomWindowAdapter(getLayoutInflater()));
-        //UiSettings.setZoomControlsEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
-
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setCompassEnabled(true);
-        //mMap.setOnInfoWindowClickListener(this);
-        //mMap.setOnMarkerClickListener((GoogleMap.OnMarkerClickListener) this);
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
@@ -117,11 +109,6 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
                 startActivity(nextActivity);
             }
         });
-
-        /* code to open up the web browser
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
-            startActivity(browserIntent);
-         */
 
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener()
         {
@@ -134,74 +121,11 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
             }
         });
 
-
-        // Add a marker in Sydney and move the camera
-        LatLng home = new LatLng(47.656642, -122.308213);
-        LatLng yoshinoCherry = new LatLng(47.658129, -122.308097);
-        LatLng cedarOfLebanon = new LatLng(47.658723, -122.307774);
-        LatLng hybridHolly = new LatLng(47.654312, -122.307866);
-        LatLng atlasCedar = new LatLng(47.655827, -122.306728);
-
-        LatLng lombardyPoplar = new LatLng(47.654491, -122.310213);
-        LatLng cherryPlum = new LatLng(47.655205, -122.306490);
-        LatLng hybridPlanetreesSycamore = new LatLng(47.658916, -122.309553);
-        LatLng deodarCedar = new LatLng(47.652013, -122.308593);
-        LatLng montereyPine = new LatLng(47.651556, -122.308437);
-        LatLng evergreenMagnolia = new LatLng(47.653798, -122.309526);
-        LatLng crabappleTrees = new LatLng(47.653872, -122.306887);
-        LatLng europeanLarch = new LatLng(47.651689, -122.308093);
-
-
         BitmapDescriptor treeIcon = BitmapDescriptorFactory.fromResource(R.drawable.smalltreeicon);
-        mMap.addMarker(new MarkerOptions().position(yoshinoCherry).title("Yoshino Cherry").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(cedarOfLebanon).title("Cedar of Lebanon").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(hybridHolly).title("Hybrid Holly").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(atlasCedar).title("Atlas Cedar").icon(treeIcon).flat(true));
-
-        mMap.addMarker(new MarkerOptions().position(lombardyPoplar).title("Lombardy Poplar").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(cherryPlum).title("Cherry Plum").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(hybridPlanetreesSycamore).title("Hybrid Planetrees/Sycamore").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(deodarCedar).title("Deodar Cedar").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(montereyPine).title("Monterey Pine").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(evergreenMagnolia).title("Evergreen Magnolia").icon(treeIcon).flat(true));
-        mMap.addMarker(new MarkerOptions().position(crabappleTrees).title("Crab Apple Trees").icon(treeIcon).flat(true));
-
-        //mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
+        LatLng home = new LatLng(47.656642, -122.308213);
+        for (Map.Entry<String, LatLng> value : MainActivity.map.entrySet())
+            mMap.addMarker(new MarkerOptions().position(value.getValue()).title(value.getKey()).icon(treeIcon).flat(true));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 16));
-        //  mMap.CameraUpdateFactory.zoomTo(20);
-
-        /*
-                Toast.makeText(TestMapsActivity.this, "Tap the button to the left to navigate to this tree" +
-                " with the Google Maps app (will open seperately)", Toast.LENGTH_LONG).show();
-
-
-         */
-
-//        // Here, thisActivity is the current activity
-//        if (ContextCompat.checkSelfPermission(TestMapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//
-//            // Should we show an explanation?
-//            if (ActivityCompat.shouldShowRequestPermissionRationale(TestMapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-//
-//                // Show an expanation to the user *asynchronously* -- don't block
-//                // this thread waiting for the user's response! After the user
-//                // sees the explanation, try again to request the permission.
-//
-//            } else {
-//
-//                // No explanation needed, we can request the permission.
-//
-//                ActivityCompat.requestPermissions(TestMapsActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_ACCESS_FINE_LOCATION);
-//
-//                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
-//                // app-defined int constant. The callback method gets the
-//                // result of the request.
-//            }
-//        }
-//        if (ContextCompat.checkSelfPermission(TestMapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-//            mMap.setMyLocationEnabled(true);
-//        }
-
     }
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
@@ -244,19 +168,14 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
                     if (ContextCompat.checkSelfPermission(this,
                             Manifest.permission.ACCESS_FINE_LOCATION)
                             == PackageManager.PERMISSION_GRANTED) {
-
-
                         mMap.setMyLocationEnabled(true);
                     }
-
                 } else {
-
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
                     Toast.makeText(this, "Permission Denied", Toast.LENGTH_LONG).show();
@@ -270,12 +189,6 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
     }
 }
 
-//                 iv.setImageResource(R.drawable.yoshinocherry);
-
-
-
-
-
 class CustomWindowAdapter implements InfoWindowAdapter{
     LayoutInflater mInflater;
 
@@ -287,114 +200,18 @@ class CustomWindowAdapter implements InfoWindowAdapter{
 
     @Override
     public View getInfoContents(Marker marker) {
-        // Getting view from the layout file
-        //View v = mInflater.inflate(R.layout.sample_testing_view, null);
-        View v;
-        ImageView iv;
-        TextView tv;
-        if (marker.getTitle().equals("Yoshino Cherry")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.yoshinocherry);
-        } else if (marker.getTitle().equals("Cedar of Lebanon")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.cedaroflebanon);
-        } else if (marker.getTitle().equals("Hybrid Holly")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.hybridholly);
-        } else if (marker.getTitle().equals("Atlas Cedar")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.atlascedar);
-        } else if (marker.getTitle().equals("Lombardy Poplar")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.lombardypoplar);
-        } else if (marker.getTitle().equals("Cherry Plum")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.cherryplum);
-        } else if (marker.getTitle().equals("Hybrid Planetrees/Sycamore")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.hybridplanetreessycamore);
-        } else if (marker.getTitle().equals("Deodar Cedar")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.deodarcedar);
-        } else if (marker.getTitle().equals("Monterey Pine")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.montereypine);
-        } else if (marker.getTitle().equals("Evergreen Magnolia")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.evergreenmagnolia);
-        } else if (marker.getTitle().equals("Crab Apple Trees")) {
-            v = mInflater.inflate(R.layout.activity_tree_window, null);
-            tv = (TextView) v.findViewById(R.id.tv1);
-            tv.setText(marker.getTitle());
-            iv = (ImageView) v.findViewById(R.id.iv1);
-            iv.setImageResource(R.drawable.crabappletrees);
-        }
-        else {
-            v = mInflater.inflate(R.layout.sample_testing_view, null);
-        }
-
-
-        // Populate fields
-
-        //TextView title = (TextView) v.findViewById(R.id.tv_info_window_title);
-        //title.setText(marker.getTitle());
-
-        //TextView description = (TextView) v.findViewById(R.id.tv_info_window_description);
-        //description.setText(marker.getSnippet());
-        // Return info window contents
-
+        View v = mInflater.inflate(R.layout.activity_tree_window, null);
+        TextView tv = (TextView) v.findViewById(R.id.tv1);
+        tv.setText(marker.getTitle());
+        ImageView iv = (ImageView) v.findViewById(R.id.iv1);
+        int id = iv.getResources().getIdentifier(MainActivity.dMap.get(marker.getTitle()),
+                "drawable", this.getClass().getPackage().getName());
+        iv.setImageResource(id);
         return v;
     }
-
-    // This changes the frame of the info window; returning null uses the default frame.
-
-    // This is just the border and arrow surrounding the contents specified above
 
     @Override
     public View getInfoWindow(Marker marker) {
         return null;
     }
 }
-
-
-/*
-
-
-                 if (i == 2) {
-                    Uri gmmIntentUri = Uri.parse("google.navigation:q=47.658129, -122.308097&mode=w");
-                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                    mapIntent.setPackage("com.google.android.apps.maps");
-                    startActivity(mapIntent);
-                }
-
- */
