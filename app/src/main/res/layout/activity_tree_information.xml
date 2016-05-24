@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -61,6 +60,15 @@
             android:layout_height="175dp"
             android:id="@+id/imageView"
             android:layout_marginTop="33dp"
+            android:layout_below="@+id/topic_id"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Scientific Name"
+            android:id="@+id/science"
             android:layout_below="@+id/topic_id"
             android:layout_centerHorizontal="true" />
 

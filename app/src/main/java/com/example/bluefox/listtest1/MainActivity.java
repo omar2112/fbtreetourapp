@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
         dMap.put("Lombardy Poplar", "lombardypoplar");
         dMap.put("Shore Pine", "shorepine");
         dMap.put("Poderosa Pine", "poderosapine");
-        dMap.put("Bristlecone Pine", "britleconepine");
+        dMap.put("Bristlecone Pine", "bristleconepine");
         dMap.put("Evergreen Magnolia", "evergreenmagnolia");
         dMap.put("European Chestnut", "europeanchestnut");
         dMap.put("Hybrid Holly", "hybridholly");

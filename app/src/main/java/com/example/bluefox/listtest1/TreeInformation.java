@@ -34,6 +34,7 @@ public class TreeInformation extends MainActivity {
 
     private void setInformation(final String itemValue) {
         TextView description = (TextView) findViewById(R.id.description);
+        TextView science = (TextView) findViewById(R.id.science);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         List<String> favorites = new ArrayList<String>();
         switch(itemValue) {
@@ -44,6 +45,7 @@ public class TreeInformation extends MainActivity {
                         "\n" +
                         "\n" +
                         "Though native only in a small part of California, this bright green pine is planted in vast portions of the planet for wood. In New Zealand, Monterey Pine is considered an invasive species where it has escaped plantation forests. The seeds of all pine species are edible and were used by Native American tribes as an important food source. Monterey Pine seeds were a valuable resource because the cones remain closed on the tree year round, and the seeds can be harvested during any season by placing the cones on or near a fire. Monterey Pine is effective for controlling erosion and stabilizing steep slopes because it is fast growing and has a wide spreading root system. ");
+                science.setText("SOME SCIENCE NAME HERE"); // Please don't forget to change
                 tourButtonPress(itemValue);
                 break;
             case ("European Larch"):
