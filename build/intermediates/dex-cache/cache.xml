@@ -1,3 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-8.4.0_d4271b07c40dc483e453038515f480725fe6593c.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_22ed51e8106fa9f1300968bf8b1f4ca6cb39a674.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_1a10db4e43aaacba99ee9917272b8563f659efb5.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_72fd779e4d65eb0bf7b8f440f375d84b79ff597a.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d7ddfc303b7c7bdc501ee066b0e90db469be4ed8">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_2691243aea66b4c7970f65b43ccf0fbd0eb7f40f.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_07118e9c46b88cabcf92dfe4104bfdc878e4394b.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b6150441163a9aa5a0ac6095f8910252a6cf53e6">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run_ae96826004a2b78dd125b4137bfc0dd9919e6f0c.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_9ef51ee5e3af7982f8bc7e932578215f6ef35739.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_77604818407229177114ed824f7795f3f8087ec1.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_f03b29ef0c21ca6cb419046fa1b0f4c4dc765edf.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-8.4.0_5b32c8f6973198dbee098b20ca5d669a6286c134.jar" />
+    </item>
+    <item
+        jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_6c4c3c13cb08c77ac39e227154d7b9da982e4945.jar" />
+    </item>
+
+</items>
