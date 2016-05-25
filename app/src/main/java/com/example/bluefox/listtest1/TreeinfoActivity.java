@@ -35,22 +35,23 @@ public class TreeinfoActivity extends MainActivity {
         theListView = (ListView) findViewById(R.id.theListView);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
 
-        String[] treeDir = new String[] {"Deodar Cedar", "Monterey Pine", "European Larch",
-                "China Fir", "Japanese Snowbell Tree", "Coast Redwood", "Coulter Pine",
-                "Lawson Cypress", "English Elm", "Pin Oak", "Eastern Dogwood", "Ginkgo",
-                "American White Elm", "Honey Locust", "Silk Tree", "Pindrow Fir", "Cork Oak",
-                "Bay Laurel", "Cherry Plum", "Douglas Fir", "Western Red Cedar", "Atlas Cedar",
-                "Red Oak", "Copper Beech", "Sugar Maple", "Paper Birch", "Swedish Whitebeam",
-                "Katsura", "Scots Pine", "Weeping European White Birch", "English Maple",
-                "Horse Chestnut", "Japanese Maple", "Yoshino Cherry", "Cedar of Lebanon",
-                "Sweetgum", "Yellow Birch", "Japanese Red Pine", "Red Hickory", "Monkey Puzzle",
-                "Black Walnut", "Bur Oak", "Hybrid Planetrees/Sycamore", "Digger Pine",
-                "Eastern White Pine", "Western White Pine", "Purpleleaf Plum", "Norway Maple",
-                "Shumard Red Oak", "Hisakura Cherry", "Lombardy Poplar", "Shore Pine",
-                "Poderosa Pine", "Bristlecone Pine", "Evergreen Magnolia", "European Chestnut",
-                "Hybrid Holly", "Dawn Redwood", "Crab Apple Trees", "Cucumber Tree",
-                "Hawthorn Trees", "Sierra Redwood", "Crape Myrtle", "Irish Yew",
-                "Chinese Juniper", "Oregon White Oak"};
+        String[] treeDir = new String[] { "American White Elm", "Atlas Cedar",  "Bay Laurel",
+                "Black Walnut", "Bristlecone Pine", "Bur Oak", "Cedar of Lebanon", "Cherry Plum",
+                "China Fir", "Chinese Juniper", "Coast Redwood", "Copper Beech", "Cork Oak",
+                "Coulter Pine", "Crab Apple Trees","Crape Myrtle", "Cucumber Tree", "Dawn Redwood",
+                "Deodar Cedar", "Digger Pine", "Douglas Fir", "Eastern Dogwood",
+                "Eastern White Pine",  "English Elm",  "English Maple", "European Chestnut",
+                "European Larch","Evergreen Magnolia", "Ginkgo", "Hawthorn Trees",
+                "Hisakura Cherry", "Honey Locust",  "Horse Chestnut", "Hybrid Holly",
+                "Hybrid Planetrees/Sycamore", "Irish Yew", "Japanese Maple", "Japanese Red Pine",
+                "Japanese Snowbell Tree", "Katsura", "Lawson Cypress", "Lombardy Poplar",
+                "Monkey Puzzle", "Monterey Pine", "Norway Maple", "Oregon White Oak",
+                "Paper Birch", "Pin Oak", "Pindrow Fir", "Poderosa Pine", "Purpleleaf Plum",
+                "Red Hickory", "Red Oak", "Shumard Red Oak", "Sierra Redwood", "Silk Tree",
+                "Scots Pine", "Shore Pine", "Sugar Maple", "Swedish Whitebeam", "Sweetgum",
+                "Weeping European White Birch", "Western Red Cedar", "Western White Pine",
+                "Yellow Birch", "Yoshino Cherry",
+        };
 
         adapter = new ArrayAdapter<String> (this, R.layout.list_item, R.id.product_name, treeDir);
         theListView.setAdapter(adapter);
