@@ -93,7 +93,7 @@ public class customTourActivity extends MainActivity implements GoogleApiClient.
             initLng = mLastLocation.getLongitude();
             //mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
             //mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
-            Toast.makeText(customTourActivity.this, String.valueOf(initLat) + " " + String.valueOf(initLng), Toast.LENGTH_LONG).show();
+            //Toast.makeText(customTourActivity.this, String.valueOf(initLat) + " " + String.valueOf(initLng), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -134,12 +134,23 @@ public class customTourActivity extends MainActivity implements GoogleApiClient.
                     .build();
         }
 
+        Button deleteb = (Button)findViewById(R.id.deletetourbutton);
+        deleteb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.treeList.clear();
+                finish();
+                startActivity(getIntent());
+            }
+        });
+
         Button b = (Button)findViewById(R.id.begintourbutton);
         b.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 if (MainActivity.treeList.size() == 0) {
-                    Toast.makeText(customTourActivity.this, "Hi", Toast.LENGTH_LONG).show();
+                    Toast.makeText(customTourActivity.this, "Add trees to your tour from the tree" +
+                            "directory.", Toast.LENGTH_LONG).show();
                 } else if (MainActivity.treeList.size() == 1) {
                     String currTree = MainActivity.treeList.get(0);
                     LatLng currDest = MainActivity.map.get(currTree);

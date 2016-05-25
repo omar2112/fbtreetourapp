@@ -59,7 +59,7 @@ public class TreeinfoActivity extends MainActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String itemValue = (String)theListView.getItemAtPosition(position);
-                Toast.makeText(getApplicationContext(), "You have selected " + itemValue , Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "You have selected " + itemValue , Toast.LENGTH_SHORT).show();
                 Intent nextActivity = new Intent(TreeinfoActivity.this, TreeInformation.class);
                 nextActivity.putExtra("trees", itemValue);
                 startActivity(nextActivity);
