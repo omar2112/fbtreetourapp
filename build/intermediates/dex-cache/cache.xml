@@ -33,7 +33,7 @@
         jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="06e537f26cf7b5f6fb773ed1a266b986ccf47ca1">
+        sha1="dcf6efca5a6bbde7e49d3cbf4b269b76e05273aa">
         <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_2691243aea66b4c7970f65b43ccf0fbd0eb7f40f.jar" />
     </item>
     <item
@@ -47,7 +47,7 @@
         jar="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="8e49d121ac91e415137a2cfce05d08791f92f3d0">
+        sha1="8b3e53c9c392988465d6ef6c7613cc3d9f21f019">
         <dex dex="/home/bluefox/AndroidStudioProjects/jamyver2/fbtreetourapp/app/build/intermediates/pre-dexed/debug/instant-run_ae96826004a2b78dd125b4137bfc0dd9919e6f0c.jar" />
     </item>
     <item

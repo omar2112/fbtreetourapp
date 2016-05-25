@@ -296,7 +296,7 @@ public class TreeInformation extends MainActivity {
                 science.setText("(Sorbus intermedia)");
                 break;
             case("Katsura"):
-                imageView.setImageResource(R.drawable.swedishwhitebeam);
+                imageView.setImageResource(R.drawable.katsura);
                 description.setText("Padelford Hall is shadowy and lush with a forest-like setting of Katsura trees and Scots pines. Katsura has a Japanese name, but it is native to Japan and China. Its roundish heart-shaped leaves are bronze as they emerge in spring, then green all summer before lighting up in fall in yellow, apricot or red. Fall's glowing colors are often accompanied by a fragrance of burnt sugar, strawberries, or cotton candy. As long as katsuras receive sufficient summer moisture they do well in our climate and soils, growing large and proving hardy, disease-free and long lived.\n" +
                         "The katsura was introduced to the United States in 1865 by Thomas Hogg, who sent seeds from Japan to his brother for propagation in their family nursery in New York. The trees wood is white, soft, and fine-grained and is used in cabinetry, paneling, furniture, building interiors and boxes. ");
                 tourButtonPress(itemValue);
@@ -324,7 +324,7 @@ public class TreeInformation extends MainActivity {
                 science.setText("(Acer campestre)");
                 break;
             case("Horse Chestnut"):
-                imageView.setImageResource(R.drawable.englishmaple);
+                imageView.setImageResource(R.drawable.horsechestnut);
                 description.setText("Horse Chestnut trees line Skagit Lane, forming a shady colonnade. Native to Greece and Albania, this species was introduced to the United States in the 1740s because it has the showiest floral display of all large shade trees, with foot-long (0.3 meter-long) clusters of white flowers in late April or early May. Unlike the true Chestnut tree the nuts produced by this species, known as conkers, are inedible. Squirrels gather many, and plant those that they don't eat causing many wild horse chestnut seedlings in this area. The leaves turn to gold or pale brown in autumn, revealing large sticky buds which will burst with a flourish early next spring.\n" +
                         "The name \"Horse Chestnut\" was probably given originally because the fruits were used by the Turks as a drug for horses suffering from broken wind or coughs. The seeds were used in France and Switzerland for whitening hemp, flax, silk, and wool and can also dye fabrics a sky-blue color. The conkers placed in the corners of a room are rumored to keep spiders away. The flowers contain quercetin, a dye and an antihistamine. The wood is soft, light, and not durable. ");
                 tourButtonPress(itemValue);
@@ -337,7 +337,7 @@ public class TreeInformation extends MainActivity {
                 science.setText("(Acer palmatum)");
                 break;
             case("Sweetgum"):
-                imageView.setImageResource(R.drawable.japanesemaple);
+                imageView.setImageResource(R.drawable.sweetgum);
                 description.setText("Sweetgum trees stand between the Art building and MacKenzie Hall. They are vigorous shade trees from the southeastern United States with star-shaped leaves that smell sweetly resinous if scratched. From the leaf shape you might think it a maple, except that no maple can match the sweet odor. Moreover, maple leaves and twigs are opposite one another, whereas sweetgum leaves are alternate like those of most trees. Several features make sweetgum one of the most popular urban ornamental trees. It is strong, adaptable to varied soil conditions, and produces a safe, handsome crown of branches. The fall leaf color can be spectacular red usually changing from green later in the season than most trees. Practically no insects or diseases bother this species. A drawback is its prickly seedballs littering the ground, crunching underfoot.\n" +
                         "Sweet gum resin can be used as a stabilizer in cakes and other foods and can be chewed to sweeten the breath. It also has medicinal, incense, perfume, soap, and adhesive uses. The wood is fine-grained with red heartwood that displays traverse blackish belts when cut. It is used for lumber, veneer, plywood, and railroad ties. The lumber is used to produce boxes and crates, furniture, and radio, television, and phonograph cabinets.  ");
                 tourButtonPress(itemValue);
@@ -370,7 +370,7 @@ public class TreeInformation extends MainActivity {
                 science.setText("(Araucaria araucana)");
                 break;
             case("Black Walnut"):
-                imageView.setImageResource(R.drawable.monkeypuzzle);
+                imageView.setImageResource(R.drawable.blackwalnut);
                 description.setText("On the lawn south of Denny Hall by the stone bench erected by the Class of 1915 is a stately Black Walnut tree. Across the path from it is the largest pine on campus, a Western White Pine. We've all eaten walnuts, but black walnuts possess zestier flavor and are harder to crack than the nuts of other walnut species. They grow on enormous trees, native in much of the United States, but not the Pacific Northwest.  The wood is supreme in its fine grain, lovely dark color, and hardness. Besides the food and wood, the trees serve as excellent long lived shade trees.\n" +
                         "Black walnut trees have insect repelling qualities and the leaves and husks have been used to repel fleas, flies, and bedbugs. The roots and leaves contain chemicals that suppress the growth of other plants and these chemicals are washed off the leaves by the rain, creating a unique understory plant assemblage. Black walnut can be added to a compost pile to speed bacterial activity and decomposition. The nut casings contain a dark black-brown dye and tannins which act as a mordant, a chemical that helps fix a dye.");
                 tourButtonPress(itemValue);
@@ -398,7 +398,7 @@ public class TreeInformation extends MainActivity {
                 science.setText("(Pinus strobus)");
                 break;
             case("Western White Pine"):
-                imageView.setImageResource(R.drawable.easternwhitepine);
+                imageView.setImageResource(R.drawable.westernwhitepine);
                 description.setText("East of the flagpole are two Western White Pines, two Eastern White Pines, and an Austrian black pine. How do you tell who's who? The Austrian stands out with squat cones and dark blackish-green foliage. Western white pine, compared to its eastern cousin, is narrower, darker, has chunkier bark, larger cones, and stiffer needles, and is more blue-green. Also, the twigs are usually stouter and always hairier as you peer between the needle bundles. The two species are equally prized for lumber; as ornamentals the eastern is preferred, since it is less dense, therefore less prone to being blown over in storms. Most large white pines on campus are eastern, although the western is native here.\n" +
                         "All pine seeds are edible, but the seeds of this species are fairly small and mainly used as a seasoning. A tea made from the fresh needles is aromatic and high in vitamins A and C. A candy can be made by boiling the tender new shoots in syrup. The wood is appreciated for decorative uses such as paneling because it has dark knots. ");
                 tourButtonPress(itemValue);
