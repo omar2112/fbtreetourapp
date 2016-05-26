@@ -60,7 +60,7 @@ public class Menu extends AppCompatActivity {
                     changeScreen = new Intent(view.getContext(), TreeinfoActivity.class);
                 }
                 startActivityForResult(changeScreen, 0);
-                Toast.makeText(Menu.this, homeOptions[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Menu.this, homeOptions[position], Toast.LENGTH_SHORT).show();
             }
         });
     }
