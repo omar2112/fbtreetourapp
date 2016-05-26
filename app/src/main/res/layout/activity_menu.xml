@@ -7,6 +7,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Image for each ListItem row
+        We can refer to images in our drawable folder with
+        @drawable/dot for the image named dot.png -->
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"/>
+        <!--android:src="@drawable/dot" -->
+
 
 
     <!-- Side navigation drawer UI -->
