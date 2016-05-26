@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Menu extends AppCompatActivity {
 
     private ListView mainMenuView;
@@ -49,6 +51,8 @@ public class Menu extends AppCompatActivity {
                 if (position == 3) {
                     changeScreen = new Intent(view.getContext(), AboutActivity.class);
                 } else if (position == 0) {
+                    TestMapsActivity.home = new LatLng(47.656642, -122.308213);
+                    TestMapsActivity.zoomLevel = 16;
                     changeScreen = new Intent(view.getContext(), TestMapsActivity.class);
                 }  else if (position == 2) {
                     changeScreen = new Intent(view.getContext(), customTourActivity.class);

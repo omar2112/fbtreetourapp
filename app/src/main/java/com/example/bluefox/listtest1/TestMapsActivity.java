@@ -53,6 +53,8 @@ public class TestMapsActivity extends Menu implements OnMapReadyCallback {
     private GoogleMap mMap;
     private static final int REQUEST_ACCESS_FINE_LOCATION = 0;
     GoogleApiClient mGoogleApiClient;
+    public static LatLng home = new LatLng(47.656642, -122.308213);
+    public static int zoomLevel = 16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,10 +134,9 @@ public class TestMapsActivity extends Menu implements OnMapReadyCallback {
         });
 
         BitmapDescriptor treeIcon = BitmapDescriptorFactory.fromResource(R.drawable.newtreeicon);
-        LatLng home = new LatLng(47.656642, -122.308213);
         for (Map.Entry<String, LatLng> value : MainActivity.map.entrySet())
             mMap.addMarker(new MarkerOptions().position(value.getValue()).title(value.getKey()).icon(treeIcon).flat(true));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, zoomLevel));
     }
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;

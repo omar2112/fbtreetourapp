@@ -15,11 +15,10 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:text="Add To Tour"
             android:id="@+id/tourbutton"
             android:layout_below="@+id/imageView"
-            android:layout_toRightOf="@+id/Description_holder" />
+            android:layout_alignRight="@+id/Description_holder" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -69,6 +68,14 @@
             android:id="@+id/science"
             android:layout_below="@+id/topic_id"
             android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Find on Map"
+            android:id="@+id/locatebutton"
+            android:layout_above="@+id/Description_holder"
+            android:layout_alignRight="@+id/imageView" />
 
 
     </RelativeLayout>
