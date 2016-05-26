@@ -15,7 +15,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TreeInformation extends MainActivity {
+public class TreeInformation extends Menu {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,6 @@ public class TreeInformation extends MainActivity {
         TextView description = (TextView) findViewById(R.id.description);
         TextView science = (TextView) findViewById(R.id.science);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
-        List<String> favorites = new ArrayList<String>();
         switch(itemValue) {
 
             case ("Monterey Pine"):
@@ -527,6 +527,7 @@ public class TreeInformation extends MainActivity {
                 break;
         }
     }
+
     private void tourButtonPress(final String itemValue) {
         Button b = (Button)findViewById(R.id.tourbutton);
         if (b != null) {
@@ -534,6 +535,7 @@ public class TreeInformation extends MainActivity {
                 @Override
                 public void onClick(View view) {
                     if (!containsMultiple(itemValue)) {
+                        // MainActivity.treeList.add(treeList.size() + 1 + ". " + itemValue);
                         MainActivity.treeList.add(itemValue);
                         Toast.makeText(TreeInformation.this, "Added " + itemValue + " to custom tree tour", Toast.LENGTH_SHORT).show();
                     } else {
@@ -544,6 +546,7 @@ public class TreeInformation extends MainActivity {
             });
         }
     }
+
 
     boolean containsMultiple(String itemValue) {
         for (String t: MainActivity.treeList) {

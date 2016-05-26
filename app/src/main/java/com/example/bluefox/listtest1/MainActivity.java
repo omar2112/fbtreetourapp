@@ -1,5 +1,6 @@
 package com.example.bluefox.listtest1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,12 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
-    private ArrayAdapter<String> theAdapter;
-    private ListView mainMenuView;
-    private ActionBarDrawerToggle mDrawerToggle;
-    protected DrawerLayout mDrawerLayout;
-    private String mActivityTitle;
+public class MainActivity extends Menu {
 
     private static MainActivity tourInstance;
     public static MainActivity getInstance() {
@@ -41,64 +38,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mainMenuView = (ListView) findViewById(R.id.mainMenuView);
-        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        mActivityTitle = getTitle().toString();
-        mDrawerLayout.openDrawer(Gravity.LEFT);
-        addDrawerItems();
-        setupDrawer();
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_main, null, false);
+        mDrawerLayout.addView(contentView, 0);
         setupMaps();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
         tourInstance = this;
-    }
-
-    private void addDrawerItems() {
-        final String[] homeOptions = {"Home", "Tree Tour", "Tree Directory", "Custom Tree Tour",
-                "About"};
-        theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, homeOptions);
-        mainMenuView.setAdapter(theAdapter);
-
-        mainMenuView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent changeScreen;
-                if (position == 4) {
-                    changeScreen = new Intent(view.getContext(), AboutActivity.class);
-                } else if (position == 1) {
-                    changeScreen = new Intent(view.getContext(), TestMapsActivity.class);
-                } else if (position == 0) {
-                    changeScreen = new Intent(view.getContext(), MainActivity.class);
-                }  else if (position == 3) {
-                    changeScreen = new Intent(view.getContext(), customTourActivity.class);
-                } else {
-                    changeScreen = new Intent(view.getContext(), TreeinfoActivity.class);
-                }
-                startActivityForResult(changeScreen, 0);
-                Toast.makeText(MainActivity.this, homeOptions[position], Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void setupDrawer() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
-
-            /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
-
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawerLayout.addDrawerListener(mDrawerToggle);
+        Intent nextActivity = new Intent(MainActivity.this, TestMapsActivity.class);
+        startActivity(nextActivity);
     }
 
     private void setupMaps() {
@@ -192,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         dMap.put("Western Red Cedar", "westernredcedar");
         dMap.put("Atlas Cedar", "atlascedar");
         dMap.put("Red Oak", "redoak");
-        dMap.put("Copper Beech", "copperbeach");
+        dMap.put("Copper Beech", "copperbeech");
         dMap.put("Sugar Maple", "sugarmaple");
         dMap.put("Paper Birch", "paperbirch");
         dMap.put("Swedish Whitebeam", "swedishwhitebeam");
@@ -236,26 +182,6 @@ public class MainActivity extends AppCompatActivity {
         dMap.put("Chinese Juniper", "chinesejuniper");
         dMap.put("Oregon White Oak", "oregonwhiteoak");
     }
-
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        mDrawerToggle.onConfigurationChanged(newConfig);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Activate the navigation drawer toggle
-        return mDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
-    }
-
 
 }
 

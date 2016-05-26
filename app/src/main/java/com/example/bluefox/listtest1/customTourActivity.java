@@ -22,6 +22,7 @@ package com.example.bluefox.listtest1;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
         import android.widget.Button;
+        import android.widget.ListAdapter;
         import android.widget.ListView;
         import android.widget.TextView;
         import android.widget.Toast;
@@ -71,7 +72,7 @@ package com.example.bluefox.listtest1;
 
 
 //@RuntimePermissions
-public class customTourActivity extends MainActivity implements GoogleApiClient.ConnectionCallbacks,
+public class customTourActivity extends Menu implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
     private static final int REQUEST_ACCESS_FINE_LOCATION = 0;
     GoogleApiClient mGoogleApiClient;
@@ -138,9 +139,13 @@ public class customTourActivity extends MainActivity implements GoogleApiClient.
         deleteb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity.treeList.clear();
-                finish();
-                startActivity(getIntent());
+                if (MainActivity.treeList.size() == 0) {
+                    Toast.makeText(customTourActivity.this, "You have yet to add any trees.", Toast.LENGTH_LONG).show();
+                } else {
+                    MainActivity.treeList.clear();
+                    finish();
+                    startActivity(getIntent());
+                }
             }
         });
 
@@ -149,8 +154,7 @@ public class customTourActivity extends MainActivity implements GoogleApiClient.
             @Override
             public void onClick(View view) {
                 if (MainActivity.treeList.size() == 0) {
-                    Toast.makeText(customTourActivity.this, "Add trees to your tour from the tree" +
-                            "directory.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(customTourActivity.this, "Add trees to your tour from the tree directory.", Toast.LENGTH_LONG).show();
                 } else if (MainActivity.treeList.size() == 1) {
                     String currTree = MainActivity.treeList.get(0);
                     LatLng currDest = MainActivity.map.get(currTree);
@@ -183,8 +187,14 @@ public class customTourActivity extends MainActivity implements GoogleApiClient.
         });
 
         ListView theListView = (ListView)findViewById(R.id.customTour);
-        ArrayAdapter<String> theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MainActivity.treeList);
+
+//        ArrayAdapter<String> theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MainActivity.treeList);
+//        theListView.setAdapter(theAdapter);
+
+        ListAdapter theAdapter = new MyAdapter(this, MainActivity.treeList);
         theListView.setAdapter(theAdapter);
+
+
         theListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -198,4 +208,5 @@ public class customTourActivity extends MainActivity implements GoogleApiClient.
             }
         });
     }
+
 }

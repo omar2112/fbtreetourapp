@@ -15,6 +15,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Add To Tour"
             android:id="@+id/tourbutton"
             android:layout_below="@+id/imageView"
@@ -34,6 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Description: "
             android:id="@+id/Description_holder"
             android:textSize="20sp"
@@ -48,8 +50,7 @@
             android:id="@+id/description"
             android:textSize="20sp"
             android:layout_below="@+id/Description_holder"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentLeft="true" />
 
         <ImageView
             android:layout_width="224dp"

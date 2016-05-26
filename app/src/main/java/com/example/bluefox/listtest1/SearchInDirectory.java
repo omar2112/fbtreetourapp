@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SearchInDirectory extends MainActivity {
+public class SearchInDirectory extends Menu {
 
     private ListView theListView;
     ArrayAdapter<String> adapter;

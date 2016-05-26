@@ -4,10 +4,12 @@ import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -45,8 +47,9 @@ import java.security.Permissions;
 import java.util.Map;
 
 //public class TestMapsActivity extends FragmentActivity implements OnMapReadyCallback {
-public class TestMapsActivity extends MainActivity implements OnMapReadyCallback {
+public class TestMapsActivity extends Menu implements OnMapReadyCallback {
 
+    private static final String MY_PREFERENCES = "my_preferences";
     private GoogleMap mMap;
     private static final int REQUEST_ACCESS_FINE_LOCATION = 0;
     GoogleApiClient mGoogleApiClient;
@@ -71,8 +74,15 @@ public class TestMapsActivity extends MainActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
         mDrawerLayout.closeDrawer(Gravity.LEFT);
+
+
+
     }
+
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class TreeinfoActivity extends MainActivity {
+public class TreeinfoActivity extends Menu {
 
     private ListView theListView;
     ArrayAdapter<String> adapter;
@@ -47,8 +47,8 @@ public class TreeinfoActivity extends MainActivity {
                 "Japanese Snowbell Tree", "Katsura", "Lawson Cypress", "Lombardy Poplar",
                 "Monkey Puzzle", "Monterey Pine", "Norway Maple", "Oregon White Oak",
                 "Paper Birch", "Pin Oak", "Pindrow Fir", "Poderosa Pine", "Purpleleaf Plum",
-                "Red Hickory", "Red Oak", "Shumard Red Oak", "Sierra Redwood", "Silk Tree",
-                "Scots Pine", "Shore Pine", "Sugar Maple", "Swedish Whitebeam", "Sweetgum",
+                "Red Hickory", "Red Oak", "Scots Pine", "Shore Pine", "Shumard Red Oak", "Sierra Redwood",
+                "Silk Tree", "Sugar Maple", "Swedish Whitebeam", "Sweetgum",
                 "Weeping European White Birch", "Western Red Cedar", "Western White Pine",
                 "Yellow Birch", "Yoshino Cherry",
         };

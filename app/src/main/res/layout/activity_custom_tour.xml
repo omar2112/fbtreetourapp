@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your current tour. Add trees to your tour from tree directory, then tap a tree below for GPS navigation"
+        android:text="This is your current tour. Add trees to your tour from the tree's information page, then tap a tree below for individual tree GPS navigation. Otherwise, you can also tap the Begin Tour button to navigate through all trees."
         android:id="@+id/textView99" />
 
     <ListView
@@ -34,9 +34,10 @@
         android:layout_height="wrap_content"
         android:text="Begin Tour"
         android:id="@+id/begintourbutton"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
         android:layout_below="@+id/textView99"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="50dp" />
+        android:layout_alignParentLeft="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:text="Delete Tour"
         android:id="@+id/deletetourbutton"
-        android:layout_below="@+id/textView99"
-        android:layout_alignRight="@+id/textView99"
-        android:layout_alignBottom="@+id/begintourbutton" />
+        android:layout_marginLeft="36dp"
+        android:layout_above="@+id/customTour"
+        android:layout_toRightOf="@+id/begintourbutton" />
 </RelativeLayout>
