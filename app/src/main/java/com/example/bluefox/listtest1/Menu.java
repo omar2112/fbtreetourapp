@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,7 +42,7 @@ public class Menu extends AppCompatActivity {
     private void addDrawerItems() {
         final String[] homeOptions = {"Home", "Tree Directory", "Custom Tree Tour",
                 "About"};
-        ArrayAdapter<String> theAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, homeOptions);
+        ListAdapter theAdapter = new MyAdapter2(this, homeOptions);
         mainMenuView.setAdapter(theAdapter);
 
         mainMenuView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
