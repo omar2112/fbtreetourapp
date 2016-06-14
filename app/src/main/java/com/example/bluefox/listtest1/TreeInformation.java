@@ -2,23 +2,16 @@ package com.example.bluefox.listtest1;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TreeInformation extends Menu {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +20,6 @@ public class TreeInformation extends Menu {
         View contentView = inflater.inflate(R.layout.activity_tree_information, null, false);
         mDrawerLayout.addView(contentView, 0);
         mDrawerLayout.closeDrawer(Gravity.LEFT);
-
-
         Intent launchedMe = getIntent();
         String itemValue = launchedMe.getStringExtra("trees");
         TextView topic_name = (TextView)findViewById(R.id.topic_id);
@@ -631,7 +622,6 @@ public class TreeInformation extends Menu {
                 @Override
                 public void onClick(View view) {
                     if (!containsMultiple(itemValue)) {
-                        // MainActivity.treeList.add(treeList.size() + 1 + ". " + itemValue);
                         MainActivity.treeList.add(itemValue);
                         Toast.makeText(TreeInformation.this, "Added " + itemValue + " to custom tree tour", Toast.LENGTH_SHORT).show();
                     } else {

@@ -13,12 +13,10 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SearchInDirectory extends Menu {
-
     private ListView theListView;
     ArrayAdapter<String> adapter;
     EditText inputSearch;
@@ -31,8 +29,6 @@ public class SearchInDirectory extends Menu {
         View contentView = inflater.inflate(R.layout.activity_treeinfo, null, false);
         mDrawerLayout.addView(contentView, 0);
         mDrawerLayout.closeDrawer(Gravity.LEFT);
-
-
         theListView = (ListView) findViewById(R.id.theListView);
         inputSearch = (EditText) findViewById(R.id.inputSearch);
 
@@ -53,33 +49,20 @@ public class SearchInDirectory extends Menu {
             }
         });
 
-        /**
-         * Enabling Search Filter
-         * */
         inputSearch.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                // When user changed the Text
                 SearchInDirectory.this.adapter.getFilter().filter(cs);
             }
 
             @Override
             public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-                                          int arg3) {
-                // TODO Auto-generated method stub
-
-            }
+                                          int arg3) {}
 
             @Override
-            public void afterTextChanged(Editable arg0) {
-                // TODO Auto-generated method stub
-            }
+            public void afterTextChanged(Editable arg0) {}
         });
-
-
     }
-
 }
 
 

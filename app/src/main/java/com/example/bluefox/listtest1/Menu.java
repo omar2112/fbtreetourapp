@@ -6,29 +6,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import com.google.android.gms.maps.model.LatLng;
 
 public class Menu extends AppCompatActivity {
-
     private ListView mainMenuView;
     private ActionBarDrawerToggle mDrawerToggle;
     protected DrawerLayout mDrawerLayout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         mainMenuView = (ListView) findViewById(R.id.mainMenuView);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         addDrawerItems();
@@ -36,8 +29,6 @@ public class Menu extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
     }
-
-
 
     private void addDrawerItems() {
         final String[] homeOptions = {"Home", "Tree Directory", "Custom Tree Tour",
@@ -61,7 +52,6 @@ public class Menu extends AppCompatActivity {
                     changeScreen = new Intent(view.getContext(), TreeinfoActivity.class);
                 }
                 startActivityForResult(changeScreen, 0);
-                //Toast.makeText(Menu.this, homeOptions[position], Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -69,16 +59,14 @@ public class Menu extends AppCompatActivity {
     private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
-            /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                invalidateOptionsMenu();
             }
 
-            /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                invalidateOptionsMenu();
             }
         };
 
@@ -86,11 +74,9 @@ public class Menu extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(mDrawerToggle);
     }
 
-
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
     }
 
@@ -102,7 +88,6 @@ public class Menu extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Activate the navigation drawer toggle
         return mDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 }

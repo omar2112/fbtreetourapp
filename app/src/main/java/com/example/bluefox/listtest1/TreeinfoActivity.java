@@ -12,8 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -59,21 +57,16 @@ public class TreeinfoActivity extends Menu {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String itemValue = (String)theListView.getItemAtPosition(position);
-                //Toast.makeText(getApplicationContext(), "You have selected " + itemValue , Toast.LENGTH_SHORT).show();
                 Intent nextActivity = new Intent(TreeinfoActivity.this, TreeInformation.class);
                 nextActivity.putExtra("trees", itemValue);
                 startActivity(nextActivity);
             }
         });
 
-        /**
-         * Enabling Search Filter
-         * */
         inputSearch.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                // When user changed the Text
                 TreeinfoActivity.this.adapter.getFilter().filter(cs);
             }
 
