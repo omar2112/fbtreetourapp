@@ -1,4 +1,4 @@
-package com.example.bluefox.listtest1;
+package com.fbtreetour.teamsonder.listtest1;
 
 import android.content.Intent;
 import android.content.res.Configuration;

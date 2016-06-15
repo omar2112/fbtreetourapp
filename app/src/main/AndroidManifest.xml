@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bluefox.listtest1">
+    package="com.fbtreetour.teamsonder.listtest1">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -32,7 +32,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name="com.fbtreetour.teamsonder.listtest1.MainActivity"
             android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,11 +41,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TreeinfoActivity"
+            android:name="com.fbtreetour.teamsonder.listtest1.TreeinfoActivity"
             android:label="@string/menu"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".AboutActivity"
+            android:name="com.fbtreetour.teamsonder.listtest1.AboutActivity"
             android:label="@string/menu"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -60,16 +60,16 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".TestMapsActivity"
+            android:name="com.fbtreetour.teamsonder.listtest1.TestMapsActivity"
             android:label="@string/menu" />
         <activity
-            android:name=".customTourActivity"
+            android:name="com.fbtreetour.teamsonder.listtest1.customTourActivity"
             android:label="@string/menu"/>
         <activity
-            android:name=".TreeInformation"
+            android:name="com.fbtreetour.teamsonder.listtest1.TreeInformation"
             android:label="@string/menu"/>
         <activity
-            android:name=".Menu"
+            android:name="com.fbtreetour.teamsonder.listtest1.Menu"
             android:label="@string/menu"></activity>
     </application>
 

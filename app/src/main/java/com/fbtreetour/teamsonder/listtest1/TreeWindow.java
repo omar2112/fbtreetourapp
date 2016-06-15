@@ -1,4 +1,4 @@
-package com.example.bluefox.listtest1;
+package com.fbtreetour.teamsonder.listtest1;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,27 +10,27 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class testingView extends View {
-    private String mExampleString;
-    private int mExampleColor = Color.RED;
-    private float mExampleDimension = 0;
+public class TreeWindow extends View {
+    private String mExampleString; // TODO: use a default from R.string...
+    private int mExampleColor = Color.RED; // TODO: use a default from R.color...
+    private float mExampleDimension = 0; // TODO: use a default from R.dimen...
     private Drawable mExampleDrawable;
 
     private TextPaint mTextPaint;
     private float mTextWidth;
     private float mTextHeight;
 
-    public testingView(Context context) {
+    public TreeWindow(Context context) {
         super(context);
         init(null, 0);
     }
 
-    public testingView(Context context, AttributeSet attrs) {
+    public TreeWindow(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0);
     }
 
-    public testingView(Context context, AttributeSet attrs, int defStyle) {
+    public TreeWindow(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(attrs, defStyle);
     }
@@ -55,6 +55,7 @@ public class testingView extends View {
         }
 
         a.recycle();
+
         mTextPaint = new TextPaint();
         mTextPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setTextAlign(Paint.Align.LEFT);
@@ -76,6 +77,7 @@ public class testingView extends View {
         int paddingTop = getPaddingTop();
         int paddingRight = getPaddingRight();
         int paddingBottom = getPaddingBottom();
+
         int contentWidth = getWidth() - paddingLeft - paddingRight;
         int contentHeight = getHeight() - paddingTop - paddingBottom;
 
